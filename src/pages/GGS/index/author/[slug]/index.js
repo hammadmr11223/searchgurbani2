@@ -33,7 +33,7 @@ function AuthorRaga() {
 
     useEffect(() => {
         getAuthorRaga();
-        setAuthorName(formatAuthorName(slug));
+       // setAuthorName(formatAuthorName(slug));
 
     }, [slug])
     const getAuthorRaga = async () => {
@@ -49,21 +49,21 @@ function AuthorRaga() {
                 console.log(err, 'err');
             });
     }
-    const formatAuthorName = (slugName) => {
+    /* const formatAuthorName = (slugName) => {
         return slugName
         .split('-') // Split the slug into an array of words
         .map(word => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize the first letter of each word
         .join(' '); // Join the words back together with spaces
-    };
+    }; */
     return (
         <div>
-            <HelmetWrapper
+           {/*  <HelmetWrapper
                 title={`Sri Guru Granth Sahib Ji Raags Index - Author: ${formatAuthorName(slug)}`}
                 description={`Sri Guru Granth Sahib Raags Index - Author: ${formatAuthorName(slug)} - searchgurbani.com`}
                 keywords="guru granth sahib, granth, shabad, kirtan, sikh scripture, sikhism , raags, asa, suhi, gauri, ramkali, nanak, arjan, amar das, angad, ram das"
                 image="https://www.searchgurbani.com/assets/img/sg-ggs1.png"
                 url={currentUrl}
-            />
+            /> */}
             {loader && <Spinner />}
             <section className='inner-actions p-4' >
                 <div className='container'>
