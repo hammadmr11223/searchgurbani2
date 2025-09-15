@@ -195,11 +195,11 @@ function SearchResultPreview() {
                                                     {/* new  */}
                                                     <strong>
                                                         {index + pageData.showing_from}. &nbsp;
-                                                        <Link href={`/guru-granth-sahib/ang/${item.pageno}/line/${item.lineno}`}>
+                                                        <Link href={`/GGS/ang/${item.pageno}/line/${item.lineno}`}>
                                                             Ang {item.pageno} Line {item.pagelineno} {item.raag} : {item.author}
                                                         </Link>
                                                         <br />
-                                                        <Link href={`/guru-granth-sahib/shabad/${item.shabad_id}/line/${item.shabadlineno}`}>
+                                                        <Link href={`/GGS/shabad/${item.shabad_id}/line/${item.shabadlineno}`}>
                                                             or Go to Shabad
                                                         </Link>
                                                     </strong>

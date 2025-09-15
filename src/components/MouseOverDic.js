@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { Tooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css'; 
 import { useLocation } from 'react-router-dom';
+import Link from 'next/link';
 
 const MouseOverDic = ({ content, keyWord, mouse, punctation, lareevar,gurmukhiFont,gurmukhiColor,gurmukhiSize }) => {
     const location = useLocation();
@@ -38,7 +39,7 @@ const MouseOverDic = ({ content, keyWord, mouse, punctation, lareevar,gurmukhiFo
                     data-tooltip-id={item.tooltip ? 'tooltip' : undefined}
                     data-tooltip-content={item.tooltip ? item.tooltip : undefined}
                 >
-                    <Link to={`/sggs-kosh/view`} state={{ Word: item.word }}style={{ cursor: item.tooltip ? 'pointer' : 'default' , color:item.tooltip ? '#7c1012' : 'black',
+                    <Link href={`/sggs-kosh/view`} state={{ Word: item.word }}style={{ cursor: item.tooltip ? 'pointer' : 'default' , color:item.tooltip ? '#7c1012' : 'black',
                         fontFamily: gurmukhiFont, fontSize: `${gurmukhiSize}px`, 
                      }}>{item.word}</Link>{' '}
                 </span>
