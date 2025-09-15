@@ -119,7 +119,7 @@ function SearchGurbaniDV() {
                             <ul>
                                 <li>SGDV is cross platform software, can be installed on Windows/ MAC OSx/ Linux</li>
                                 <li>Java Run Enviornment</li>
-                                <li>Recommended Version 6 Update 5 or higher: <Link to="http://java.com/en/download/manual.jsp" target="_blank"><b>Details and Downloads</b></Link></li>
+                                <li>Recommended Version 6 Update 5 or higher: <Link href="http://java.com/en/download/manual.jsp" target="_blank"><b>Details and Downloads</b></Link></li>
                                 <li>RAM : atleast 512 MB</li>
                                 <li>Disk Space: 400MB</li>
                             </ul>

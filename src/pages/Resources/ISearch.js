@@ -480,19 +480,19 @@ const AngByAng = (props) => {
                             </div>
                             </div>
                                     <div className='pg d-flex'>
-                                    <Link className={isAudio1 ? 'page-itm active' : 'page-itm'} onClick={(e) => {
+                                    <Link  href={'#'} className={isAudio1 ? 'page-itm active' : 'page-itm'} onClick={(e) => {
                                 e.preventDefault(); handleClickAudio('sat');
                                 setIsAudio1(true); setIsAudio2(false); setIsAudio3(false); setIsAudio4(false);
                             }}>1</Link>
-                            <Link className={isAudio2 ? 'page-itm active' : 'page-itm'} onClick={(e) => {
+                            <Link href={'#'} className={isAudio2 ? 'page-itm active' : 'page-itm'} onClick={(e) => {
                                 e.preventDefault(); handleClickAudio('jas');
                                 setIsAudio1(false); setIsAudio2(true); setIsAudio3(false); setIsAudio4(false);
                             }}>2</Link>
-                            <Link className={isAudio3 ? 'page-itm active' : 'page-itm'} onClick={(e) => {
+                            <Link  href={'#'} className={isAudio3 ? 'page-itm active' : 'page-itm'} onClick={(e) => {
                                 e.preventDefault(); handleClickAudio('jag');
                                 setIsAudio1(false); setIsAudio2(false); setIsAudio3(true); setIsAudio4(false);
                             }}>3</Link>
-                            <Link className={isAudio4 ? 'page-itm active' : 'page-itm'} onClick={(e) => {
+                            <Link href={'#'} className={isAudio4 ? 'page-itm active' : 'page-itm'} onClick={(e) => {
                                 e.preventDefault(); handleClickAudio('gms');
                                 setIsAudio1(false); setIsAudio2(false); setIsAudio3(false); setIsAudio4(true);
                             }}>4</Link>
