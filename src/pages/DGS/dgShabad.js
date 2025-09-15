@@ -39,7 +39,7 @@ function DgShabadLine() {
     const { shabad_id, lineno } = router.query;
     console.log('Shabad ID:', shabad_id);
     console.log('Shabad Line ID:', lineno);
-    const data = location.state;
+    // const data = location.state;
     const shareUrl = 'https://searchgurbani.com';
     const title = 'Search Gurbani : Gurbani Website';
     const [loader, setLoader] = useState(false);
