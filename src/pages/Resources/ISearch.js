@@ -24,6 +24,7 @@ import mail from '@/assets/img/mail.svg';
 import FontChange from '@/components/FontChange';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 const AngByAng = (props) => {
     // const location = useLocation();

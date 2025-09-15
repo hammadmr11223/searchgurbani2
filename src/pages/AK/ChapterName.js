@@ -11,6 +11,7 @@ import Spinner from '@/components/Spinner';
 import {Helmet} from "react-helmet";
 import HelmetWrapper from '@/components/CommonHelmet';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 //import imgs from './assets/img/content/ggs_01.jpg'
 
 function ChapterName() {
@@ -87,9 +88,9 @@ function ChapterName() {
                                         <div className='ang-itm padd-indexx'>
                                             <div className="section_line line row1">
                                                 <span className="col_sl_no sec-no">{index + 1}</span>
-                                                <Link  to={`/AK/shabad/${item.shabad_id}/${shabadNameWithDashes}`}  className="col_sl_no sec-nos">
+                                                <Link  href={`/AK/shabad/${item.shabad_id}/${shabadNameWithDashes}`}  className="col_sl_no sec-nos">
                                                     <span >{item.shabad_name}</span></Link>
-                                                    <Link  to={`/AK/shabad/${item.shabad_id}/${shabadNameWithDashes}`} className="col_section_no sec-no page-no"> 
+                                                    <Link  href={`/AK/shabad/${item.shabad_id}/${shabadNameWithDashes}`} className="col_section_no sec-no page-no"> 
                                                 <span>{item.pageno}</span></Link>
                                             </div>
                                         </div>
