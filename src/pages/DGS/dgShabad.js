@@ -108,7 +108,13 @@ function DgShabadLine() {
         { label: "English", value: "English" },
         { label: "Teeka", value: "Teeka" },
     ];
+const [currentUrl, setCurrentUrl] = useState()
 
+      useEffect(() => {
+             if (typeof window !== "undefined") {
+               setCurrentUrl(window.location.href);
+             }
+           }, []);
     useEffect(() => {
         getShabadLines(shabad_id);
         setPageNo(shabad_id)
@@ -792,7 +798,7 @@ function DgShabadLine() {
                                                 description={`${headingData.meta_description}`}
                                                 keywords="Gurbani Kirtan, Amrit Keertan, Gurbani, Shabad Keertan,  Dasam Granth, Guru granth, granthSree Vaahiguroo Jee Kee Fateh  ॥"
                                                 image="https://www.searchgurbani.com/assets/img/sg-ggs1.png"
-                                                url={window.location.href}
+                                                url={currentUrl}
                                             />}
                                                 {/* <h2 className='lang-1'  >{item.punjabi}</h2> */}
                                                 {isLareevar && isLareevarAssist === false ? <div style={{ fontFamily: gurmukhiFont, fontSize: `${gurmukhiSize}px`, color: gurmukhiColor }} >{item.punjabi.replace(/\s+/g, '')}</div> :

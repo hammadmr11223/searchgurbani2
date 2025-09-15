@@ -118,6 +118,13 @@ console.log("object", shabad_id, "lineno",lineno );
         { label: "Teeka", value: "Teeka" },
         { label: "Teeka Hindi", value: "Teeka Hindi" },
     ];
+    const [currentUrl, setCurrentUrl] = useState()
+
+      useEffect(() => {
+             if (typeof window !== "undefined") {
+               setCurrentUrl(window.location.href);
+             }
+           }, []);
 
       useEffect(() => {
     // Get from localStorage
@@ -814,7 +821,7 @@ pageTitle
                                                 description={`${headingData.meta_description}`}
                                                 keywords={`Bhai Nand Lal - ${type} shabad, bnl-shabad`}
                                                 image="https://www.searchgurbani.com/assets/img/sg-ggs1.png"
-                                                url={window.location.href}
+                                               url={currentUrl}
                                             />}
                                                 {/* <h2 className='lang-1'  >{item.punjabi}</h2> */}
                                                 {isLareevar && isLareevarAssist === false ? <div style={{ fontFamily: gurmukhiFont, fontSize: `${gurmukhiSize}px`, color: gurmukhiColor }} >{item.punjabi.replace(/\s+/g, '')}</div> :

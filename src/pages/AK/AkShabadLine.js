@@ -118,6 +118,15 @@ function AkShabadLine() {
         { label: "Shahmukhi", value: "Shahmukhi" },
     ];
 
+     const [currentUrl, setCurrentUrl] = useState("");
+
+
+      useEffect(() => {
+             if (typeof window !== "undefined") {
+               setCurrentUrl(window.location.href);
+             }
+           }, []);
+
     useEffect(() => {
         getShabadLines(shabad_id);
         setPageNo(shabad_id);
@@ -427,7 +436,7 @@ function AkShabadLine() {
                 description={`${headingData.meta_description}`}
                 keywords="Gurbani Kirtan,amrit Keertan, Gurbani, Shabad Keertan,  Dasam Granth, Guru Granth, Granth, Kabit, Bhai Gurdas, Vaaran, Varan"
                 image="https://www.searchgurbani.com/assets/img/sg-ggs1.png"
-                url={window.location.href}
+                url={currentUrl}
             />
             {loader && <Spinner />}
             <section className='section-shabad p-5'>

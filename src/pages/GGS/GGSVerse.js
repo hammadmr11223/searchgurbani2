@@ -116,7 +116,13 @@ const GGSVerse = (props) => {
         { label: "Teeka - Faridkot Teeka Hindi", value: "Faridkot Teeka Hindi" },
         { label: "Teeka - SGPC Shabadrth", value: "SGPC Shabadrth" }
     ];
+const [currentUrl, setCurrentUrl] = useState()
 
+      useEffect(() => {
+             if (typeof window !== "undefined") {
+               setCurrentUrl(window.location.href);
+             }
+           }, []);
     useEffect(() => {
         setAngNo(page_no);
         getVerse(page_no);
@@ -905,7 +911,7 @@ const GGSVerse = (props) => {
                                                 description={`This Verse ${item.punjabi} ${item.english} ${item.hindi}`}
                                                 keywords="Gurbani Kirtan, Amrit Keertan, Gurbani, Shabad Keertan,  Dasam Granth, Guru granth, granth, kabit, Bhai Gurdas, Vaaran, Varan"
                                                 image="https://www.searchgurbani.com/assets/img/sg-ggs1.png"
-                                                url={window.location.href}
+                                                url={currentUrl}
                                             />{/* } */}
                                                 {/* <h2 className='lang-1'  >{item.punjabi}</h2> */}
                                                 {isLareevar && isLareevarAssist === false ? <div style={{ fontFamily: gurmukhiFont, fontSize: `${gurmukhiSize}px`, color: gurmukhiColor }} >{item.punjabi.replace(/\s+/g, '')}</div> :
