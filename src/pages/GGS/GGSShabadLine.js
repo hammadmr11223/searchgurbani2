@@ -49,6 +49,7 @@ function ShabadLine() {
         }
     }, [router.query.data]);
     // const { shabad_id, lineno, shabadE } = useParams();
+    const params = useParams()
     const shabad_id = params?.shabad_id;
     const lineno = params?.lineno;
     const shabadE = params?.shabadE;
