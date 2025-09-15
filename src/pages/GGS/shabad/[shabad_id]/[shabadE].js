@@ -136,7 +136,13 @@ function ShabadLine() {
         { label: "Teeka - Faridkot Teeka Hindi", value: "Faridkot Teeka Hindi" },
         { label: "Teeka - SGPC Shabadrth", value: "SGPC Shabadrth" }
     ];
+const [currentUrl, setCurrentUrl] = useState()
 
+      useEffect(() => {
+             if (typeof window !== "undefined") {
+               setCurrentUrl(window.location.href);
+             }
+           }, []);
     useEffect(() => {
         getShabadLines(shabad_id);
         setPageNo(shabad_id)
@@ -916,7 +922,7 @@ function ShabadLine() {
                                                         description={`${headingData.meta_description}`}
                                                         keywords="guru granth sahib, granth, shabad, kirtan, sikh scripture, sikhism ,nanak, arjan, amar das, angad, ram dasik-onkaar sati naam kartaa purkhu nirbhau nirvairu"
                                                         image="https://www.searchgurbani.com/assets/img/sg-ggs1.png"
-                                                        url={window.location.href}
+                                                        url={currentUrl}
                                                     />}
 
                                                 {/* <h2 className='lang-1'  >{item.punjabi}</h2> */}
